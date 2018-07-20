@@ -100,32 +100,25 @@
         <h2> All Frameworks Registered </h2>
         <div class="filter-box"> 
             <label for=""> Filtrar por Linguagem  </label>
-            <select [(ngModel)]="framework.id_language" name="id_language" (change)="listFrameworkByLanguage($event)" required>
-                <option *ngFor="let language of languages" value={{language.id}}>
-                    {{ language.name }} 
-                </option>
-            </select>
+            <div class="style-select">
+                <select [(ngModel)]="framework.id_language" name="id_language" (change)="listFrameworkByLanguage($event)" required>
+                    <option *ngFor="let language of languages" value={{language.id}}>
+                        {{ language.name }} 
+                    </option>
+                </select>
+            </div>
         </div>
-        <div class="card" *ngFor="let framework of frameworks">
-            <div class="card-header">
+        <div class="container-cards">
+            <div class="card" *ngFor="let framework of frameworks">
                 <div class="card-body">
                     <img class="card-img">
                     
                     <div class="card-list"> 
-                        <ul>
-                          <li>
-                              {{framework.name}} - {{framework.site}} 
-                          </li>
-                        </ul>  
-                    </div>
-                    
-                    <div class="card-options">    
-                        <a href="#">
-                            <i> edit </i>
-                        </a>
-                        <a href="#">
-                            <i> delete </i>
-                        </a>
+                        <span> {{ framework.name }} </span> - {{ framework.language }}
+                        <br/> Created at <span> {{ framework.year_creation }} </span>
+                        <br/> By <span> {{ framework.creator }} </span>
+                        <br/> '{{framework.opinion}}'
+                        <br/> '{{framework.pros_cons}}' 
                     </div>
                 </div>
             </div>
