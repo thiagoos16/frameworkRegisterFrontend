@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 import { FrameworkService } from './framework.service';
 
@@ -11,14 +12,25 @@ export class AppComponent {
   title = 'app';
 
   frameworks: Array<any>;
+  framework: any;
 
   constructor(private frameworkService: FrameworkService) { }
 
   ngOnInit() {
+    this.framework = {};
+
     this.getFrameworks();
   }
 
   getFrameworks() {
     this.frameworkService.getFrameworks().subscribe(data => this.frameworks = data);
+  }
+
+  postFramework(frm: FormGroup) {
+    this.frameworkService.postFramework(this.framework).subscribe(response => {
+      this.frameworks.push(response);
+      
+      frm.reset();
+    });
   }
 }

@@ -13,4 +13,8 @@ export class FrameworkService {
   getFrameworks() {
       return this.http.get<any[]>(`${this.frameworkUrl}`);
   }
+
+  postFramework(framework: any) {
+    return this.http.post(this.frameworkUrl, framework);
+  }
 }

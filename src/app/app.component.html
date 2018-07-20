@@ -4,8 +4,8 @@
 </header>
 
 <body>
-    <div class="container" #form="ngForm" (ngSubmit)="postFramework(frm)">
-        <form method="post">
+    <div class="container">
+        <form method="post" #frm="ngForm" (ngSubmit)="postFramework(frm)">
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
@@ -16,7 +16,7 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label for=""> Image </label>
-                        <input type="text" id="image" name="image" placeholder="Image" [(ngModel)]="framework.image" required> 
+                        <input type="text" id="image" name="image" placeholder="Image" [(ngModel)]="framework.url_image" required> 
                     </div>
                 </div>
             </div>
