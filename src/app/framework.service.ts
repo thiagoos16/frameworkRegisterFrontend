@@ -22,5 +22,9 @@ export class FrameworkService {
 
   getLanguages() {
     return this.http.get<any[]>(`${this.languageUrl}`);
-}
+  }
+
+  getFrameworksByLanguage(id_language) {
+    return this.http.get<any[]>(`${this.frameworkUrl + '/listByLanguage/' + id_language}`);
+  }
 }

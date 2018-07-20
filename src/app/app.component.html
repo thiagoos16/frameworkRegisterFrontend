@@ -92,6 +92,13 @@
     </div>
 
     <div class="container">
+        <hr />  
+        <label for=""> Filtrar por Linguagem  </label>
+        <select [(ngModel)]="framework.id_language" name="id_language" (change)="listFrameworkByLanguage($event)" required>
+            <option *ngFor="let language of languages" value={{language.id}}>
+                {{ language.name }} 
+            </option>
+        </select>
         <div class="card" *ngFor="let framework of frameworks">
             <div class="card-header">
                 <div class="card-body">

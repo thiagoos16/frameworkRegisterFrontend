@@ -48,4 +48,8 @@ export class AppComponent {
   getLanguages() {
     this.frameworkService.getLanguages().subscribe(data => this.languages = data);
   }
+
+  listFrameworkByLanguage(event) {
+    this.frameworkService.getFrameworksByLanguage(event.srcElement.value).subscribe(data => this.frameworks = data);
+  }
 }
