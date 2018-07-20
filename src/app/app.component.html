@@ -5,7 +5,80 @@
 
 <body>
     <div class="container">
-        <form> 
+        <form method="post">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="name"> Name </label>
+                        <input type="text" id="name" name="name" placeholder="Name"> 
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for=""> Image </label>
+                        <input type="text" id="image" name="image" placeholder="Image"> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for=""> Site </label>
+                        <input type="text" id="site" name="site" placeholder="Site"> 
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for=""> Creator </label>
+                        <input type="text" id="creator" name="creator" placeholder="Creator"> 
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for=""> Language </label>
+                        <input type="text" id="id_language" name="id_language" placeholder="id_language"> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for=""> Year Of Creation </label>
+                        <input type="number" id="site" name="site" placeholder="Year of Creation"> 
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for=""> Latest Stable Release </label>
+                        <input type="text" id="latest_stable_release" name="latest_stable_release" placeholder="Latest Stable Release"> 
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for=""> Type </label>
+                        <input type="text" id="Type" name="Type" placeholder="Type"> 
+                    </div>    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for=""> Opinion </label>
+                        <textarea id="opinion" name="opinion" rows=3> </textarea> 
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for=""> Pros and Cons  </label>
+                        <textarea id="pros_cons" name="pros_cons" rows=3> </textarea> 
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary"> Save </button>
         </form>
     </div>
 
