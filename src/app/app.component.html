@@ -37,7 +37,7 @@
                 <div class="col-4">
                     <div class="form-group">
                         <label for=""> Language </label>
-                        <select [(ngModel)]="framework.id_language" required>
+                        <select [(ngModel)]="framework.id_language" name="id_language" required>
                             <option *ngFor="let language of languages" value={{language.id}}>
                                 {{ language.name }} 
                             </option>
@@ -62,7 +62,11 @@
                 <div class="col-4">
                     <div class="form-group">
                         <label for=""> Type </label>
-                        <input type="text" id="Type" name="Type" placeholder="Type" [(ngModel)]="framework.type"> 
+                        <select [(ngModel)]="framework.type" name="type" required>
+                            <option *ngFor="let type of types" value={{type}}>
+                                {{ type }}
+                            </option>
+                        </select>
                     </div>    
                 </div>
             </div>

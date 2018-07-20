@@ -15,6 +15,13 @@ export class AppComponent {
   framework: any;
 
   languages: Array<any>;
+  
+  types = [
+    'Fullstack',
+    'Micro',
+    'Frontend',
+    'Backend'
+  ];
 
   constructor(private frameworkService: FrameworkService) { }
 
