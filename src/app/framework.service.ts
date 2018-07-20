@@ -27,4 +27,8 @@ export class FrameworkService {
   getFrameworksByLanguage(id_language) {
     return this.http.get<any[]>(`${this.frameworkUrl + '/listByLanguage/' + id_language}`);
   }
+
+  postLanguage(language: any) {
+    return this.http.post(this.languageUrl, language);
+  }
 }

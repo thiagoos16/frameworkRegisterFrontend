@@ -15,6 +15,7 @@ export class AppComponent {
   framework: any;
 
   languages: Array<any>;
+  language: any;
   
   types = [
     'Fullstack',
@@ -27,6 +28,8 @@ export class AppComponent {
 
   ngOnInit() {
     this.framework = {};
+    
+    this.language = {};
 
     this.getFrameworks();
 
@@ -42,6 +45,14 @@ export class AppComponent {
       this.frameworks.push(response);
       
       frm.reset();
+    });
+  }
+
+  postLanguage(lfrm: FormGroup) {
+    this.frameworkService.postLanguage(this.language).subscribe(response => {
+      this.languages.push(response);
+      
+      lfrm.reset();
     });
   }
 
