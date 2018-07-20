@@ -7,37 +7,34 @@
     <div class="container">
         <form method="post" #frm="ngForm" (ngSubmit)="postFramework(frm)">
             <div class="row">
-                <div class="col-6">
-                    <div class="form-group">
-                        <label for="name"> Name </label>
-                        <input type="text" id="name" name="name" placeholder="Name" [(ngModel)]="framework.name" required> 
-                    </div>
+                <div class="col">
+                    <label for="name"> Name </label> 
+                    <br/>
+                    <input type="text" id="name" name="name" placeholder="Name" [(ngModel)]="framework.name" required> 
                 </div>
-                <div class="col-6">
-                    <div class="form-group">
-                        <label for=""> Image </label>
-                        <!-- <input type="file" id="image" name="image" placeholder="Image" (change)="inputImage($event)" required>  -->
-                        <input type="text" name="url_image" id="url_image" [(ngModel)]="framework.url_image" required>
-                    </div>
+                <div class="col">
+                    <label for=""> Image </label>
+                    <br/>
+                    <!-- <input type="file" id="image" name="image" placeholder="Image" (change)="inputImage($event)" required>  -->
+                    <input type="text" name="url_image" id="url_image" placeholder="image" [(ngModel)]="framework.url_image" required>
                 </div>
             </div>
             
             <div class="row">
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for=""> Site </label>
-                        <input type="text" id="site" name="site" placeholder="Site" [(ngModel)]="framework.site" required> 
-                    </div>
+                <div class="col">
+                    <label for=""> Site </label>
+                    <br/>
+                    <input type="text" id="site" name="site" placeholder="Site" [(ngModel)]="framework.site" required> 
                 </div>
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for=""> Creator </label>
-                        <input type="text" id="creator" name="creator" placeholder="Creator" [(ngModel)]="framework.creator" required> 
-                    </div>
+                <div class="col">
+                    <label for=""> Creator </label>
+                    <br/>
+                    <input type="text" id="creator" name="creator" placeholder="Creator" [(ngModel)]="framework.creator" required> 
                 </div>
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for=""> Language </label>
+                <div class="col">
+                    <label for=""> Language </label>
+                    <br/>
+                    <div class="style-select">
                         <select [(ngModel)]="framework.id_language" name="id_language" required>
                             <option *ngFor="let language of languages" value={{language.id}}>
                                 {{ language.name }} 
@@ -48,46 +45,45 @@
             </div>
 
             <div class="row">
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for=""> Year Of Creation </label>
-                        <input type="number" id="year_creation" name="year_creation" placeholder="Year of Creation" [(ngModel)]="framework.year_creation" required> 
-                    </div>
+                <div class="col">
+                    <label for=""> Year Of Creation </label>
+                    <br/>
+                    <input type="number" id="year_creation" name="year_creation" placeholder="Year of Creation" [(ngModel)]="framework.year_creation" required> 
                 </div>
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for=""> Latest Stable Release </label>
-                        <input type="text" id="latest_stable_release" name="latest_stable_release" placeholder="Latest Stable Release" [(ngModel)]="framework.latest_stable_release" required> 
-                    </div>
+                <div class="col">
+                    <label for=""> Latest Stable Release </label>
+                    <br/>
+                    <input type="text" id="latest_stable_release" name="latest_stable_release" placeholder="Latest Stable Release" [(ngModel)]="framework.latest_stable_release" required> 
                 </div>
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for=""> Type </label>
+                <div class="col">
+                    <label for=""> Type </label>
+                    <br/>
+                    <div class="style-select">
                         <select [(ngModel)]="framework.type" name="type" required>
                             <option *ngFor="let type of types" value={{type}}>
                                 {{ type }}
                             </option>
-                        </select>
-                    </div>    
+                        </select>  
+                    </div>  
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for=""> Opinion </label>
-                        <textarea id="opinion" name="opinion" rows=3 [(ngModel)]="framework.opinion" required> </textarea> 
-                    </div>
+                <div class="col">
+                    <label for=""> Opinion </label>
+                    <br/>
+                    <textarea id="opinion" name="opinion" rows=3 [(ngModel)]="framework.opinion" required> </textarea> 
                 </div>
-                <div class="col-4">
-                    <div class="form-group">
-                        <label for=""> Pros and Cons  </label>
-                        <textarea id="pros_cons" name="pros_cons" rows=3 [(ngModel)]="framework.pros_cons" required> </textarea> 
-                    </div>
+                <div class="col">
+                    <label for=""> Pros and Cons  </label>
+                    <br/>
+                    <textarea id="pros_cons" name="pros_cons" rows=3 [(ngModel)]="framework.pros_cons" required> </textarea> 
                 </div>
             </div>
 
-            <button type="submit" class="btn-primary" [disabled]="frm.invalid"> Save </button>
+            <div class="row">
+                <button type="submit" class="btn-primary" [disabled]="frm.invalid"> Save </button>
+            </div>
         </form>
     </div>
 
