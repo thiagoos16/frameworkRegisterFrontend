@@ -16,7 +16,8 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label for=""> Image </label>
-                        <input type="text" id="image" name="image" placeholder="Image" [(ngModel)]="framework.url_image" required> 
+                        <!-- <input type="file" id="image" name="image" placeholder="Image" (change)="inputImage($event)" required>  -->
+                        <input type="text" name="url_image" id="url_image" [(ngModel)]="framework.url_image" required>
                     </div>
                 </div>
             </div>
@@ -75,13 +76,13 @@
                 <div class="col-4">
                     <div class="form-group">
                         <label for=""> Opinion </label>
-                        <textarea id="opinion" name="opinion" rows=3 [(ngModel)]="framework.opinion"> </textarea> 
+                        <textarea id="opinion" name="opinion" rows=3 [(ngModel)]="framework.opinion" required> </textarea> 
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="form-group">
                         <label for=""> Pros and Cons  </label>
-                        <textarea id="pros_cons" name="pros_cons" rows=3 [(ngModel)]="framework.pros_cons"> </textarea> 
+                        <textarea id="pros_cons" name="pros_cons" rows=3 [(ngModel)]="framework.pros_cons" required> </textarea> 
                     </div>
                 </div>
             </div>
