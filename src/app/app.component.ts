@@ -14,12 +14,16 @@ export class AppComponent {
   frameworks: Array<any>;
   framework: any;
 
+  languages: Array<any>;
+
   constructor(private frameworkService: FrameworkService) { }
 
   ngOnInit() {
     this.framework = {};
 
     this.getFrameworks();
+
+    this.getLanguages();
   }
 
   getFrameworks() {
@@ -32,5 +36,9 @@ export class AppComponent {
       
       frm.reset();
     });
+  }
+
+  getLanguages() {
+    this.frameworkService.getLanguages().subscribe(data => this.languages = data);
   }
 }

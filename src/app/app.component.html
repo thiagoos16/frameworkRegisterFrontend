@@ -37,7 +37,11 @@
                 <div class="col-4">
                     <div class="form-group">
                         <label for=""> Language </label>
-                        <input type="text" id="id_language" name="id_language" placeholder="id_language" [(ngModel)]="framework.id_language" required> 
+                        <select [(ngModel)]="framework.id_language" required>
+                            <option *ngFor="let language of languages" value={{language.id}}>
+                                {{ language.name }} 
+                            </option>
+                        </select>
                     </div>
                 </div>
             </div>
