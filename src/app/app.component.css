@@ -2,7 +2,15 @@ header, body {
     font-family: "Courier New", Monospace;
 }
 
-.container {
+header, h2 {
+    background-color: #8A2BE2;
+    color: white;
+    margin: 0 auto;
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-left:5%;
+    font-size: 35px;
+    font-weight: bold;
 
 }
 
@@ -58,9 +66,20 @@ input[type=number]::-webkit-inner-spin-button {
     border: none;
     background-color: #8A2BE2;
     color:white;
-    margin:8px;
 }
 
 .btn-primary[Disabled] {
     background-color: rgb(188, 116, 237);
+}
+
+.btn-primary.f {
+    margin:8px;
+}
+
+.btn-primary.l{
+    margin-bottom:10px;
+}
+
+.container-language form {
+    margin-top:10px;
 }

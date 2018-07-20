@@ -1,6 +1,5 @@
 <header>
-    <h1> Framework Register </h1>
-    <hr />
+    Framework Register 
 </header>
 
 <body>
@@ -82,22 +81,23 @@
             </div>
 
             <div class="row">
-                <button type="submit" class="btn-primary" [disabled]="frm.invalid"> Save </button>
+                <button type="submit" class="btn-primary f" [disabled]="frm.invalid"> Save </button>
             </div>
         </form>
     </div>
 
-    <div class="container">
-        <hr />
+    <div class="container-language">
+        <h2> Register a new Programming Language!! </h2>
         <form method="post" #lfrm="ngForm" (ngSubmit)="postLanguage(lfrm)">
             <label for=""> Name  </label>
+            <br />
             <input type="text" id="name" name="name" placeholder="name" [(ngModel)]="language.name" required> 
-            <button type="submit" class="btn-primary" [disabled]="lfrm.invalid"> Save </button>
+            <button type="submit" class="btn-primary l" [disabled]="lfrm.invalid"> Save </button>
         </form>
     </div>
 
     <div class="container">
-        <hr />  
+        <h2> All Frameworks Registered </h2>
         <div class="filter-box"> 
             <label for=""> Filtrar por Linguagem  </label>
             <select [(ngModel)]="framework.id_language" name="id_language" (change)="listFrameworkByLanguage($event)" required>
